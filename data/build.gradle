@@ -44,4 +44,6 @@ dependencies {
 
     kapt 'androidx.room:room-compiler:2.6.0-alpha02'
     kapt 'com.google.dagger:dagger-compiler:2.47'
+
+    implementation project(path: ':domain')
 }
