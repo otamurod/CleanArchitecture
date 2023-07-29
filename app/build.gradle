@@ -8,15 +8,15 @@ apply from: '../common.gradle'
 
 android {
     namespace 'com.otamurod.cleanarchitecture'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.otamurod.cleanarchitecture"
         minSdk 16
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

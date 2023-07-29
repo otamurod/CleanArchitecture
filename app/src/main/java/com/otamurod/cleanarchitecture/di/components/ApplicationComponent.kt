@@ -1,7 +1,7 @@
 package com.otamurod.cleanarchitecture.di.components
 
 import com.otamurod.cleanarchitecture.App
-import com.otamurod.cleanarchitecture.MainActivity
+import com.otamurod.cleanarchitecture.presentation.MainActivity
 import com.otamurod.cleanarchitecture.di.module.ApplicationModule
 import com.otamurod.cleanarchitecture.di.module.DataModule
 import dagger.BindsInstance
