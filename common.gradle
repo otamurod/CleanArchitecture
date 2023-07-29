@@ -19,6 +19,7 @@ dependencies {
     implementation 'androidx.room:room-runtime:2.6.0-alpha02'
     implementation 'androidx.room:room-ktx:2.6.0-alpha02'
     implementation 'com.google.dagger:dagger:2.47'
+    implementation 'androidx.activity:activity-ktx:1.7.2'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0-alpha01'
     implementation 'com.github.MohammadSianaki:Retrofit2-Flow-Call-Adapter:0.2.0'
 }

@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class ApplicationModule {
     @Provides
     @Singleton
-    fun provideBaseUrl(): String = "https://jsonplaceholder.typicode.com/users"
+    fun provideBaseUrl(): String = "https://jsonplaceholder.typicode.com/"
 
     @Provides
     @Singleton
