@@ -7,8 +7,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class UserInteractor constructor(private val userRepository: UserRepository) {
+class UserInteractor @Inject constructor(private val userRepository: UserRepository) {
     fun getUsers(): Flow<Result<List<UserData>>> {
         return userRepository.getUsers()
             .map {
