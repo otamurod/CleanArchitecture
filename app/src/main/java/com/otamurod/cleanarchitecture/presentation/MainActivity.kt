@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.otamurod.cleanarchitecture.App
+import com.otamurod.cleanarchitecture.adapter.UserAdapter
 import com.otamurod.cleanarchitecture.databinding.ActivityMainBinding
 import com.otamurod.cleanarchitecture.vm.UserResource
 import com.otamurod.cleanarchitecture.vm.UserViewModel
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var factory: ViewModelProvider.Factory
     lateinit var binding: ActivityMainBinding
     private val viewModel: UserViewModel by viewModels { factory }
+    lateinit var adapter: UserAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         App.applicationComponent.inject(this)
@@ -37,6 +39,8 @@ class MainActivity : AppCompatActivity() {
                         }
                         is UserResource.Success -> {
                             Log.d("TAG", "onCreate: ${it.list}")
+                            adapter = UserAdapter(this@MainActivity, it.list!!)
+                            binding.recyclerView.adapter = adapter
                         }
                     }
                 }
